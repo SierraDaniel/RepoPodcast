@@ -1,0 +1,434 @@
+@charset "UTF-8";
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* INICIO BARRA NAVEGACION */
+.nav {
+  width: 100%;
+  border-bottom: 1px solid #646462;
+  text-align: right;
+  background-color: white;
+  height: 70px;
+  line-height: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  margin: 0px 0px 30px 0px;
+}
+
+.menu {
+  margin: 0 30px 0 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: gray;
+  background-color: white;
+  margin: 0 10px;
+  line-height: 70px;
+}
+
+.menu a:hover {
+  background: #c52e3b;
+  color: azure;
+}
+
+.menu #logo-img {
+  display: inline-block;
+}
+
+label {
+  margin: 0 20px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+}
+
+#toggle {
+  display: none;
+}
+
+h2,
+h3 {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 500px) {
+  label {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    float: right;
+  }
+
+  .menu {
+    text-align: center;
+    width: 100%;
+    display: none;
+    background-color: white;
+
+  }
+
+  .menu a {
+    display: block;
+    margin: 0;
+    clear: right;
+    color: gray;
+    border-bottom: 1px solid #808080;
+  }
+
+  #toggle:checked+.menu {
+    display: block;
+  }
+}
+
+/* FIN BARRA NAVEGACION */
+
+
+h1 {
+  padding: 30px 0 5px 0;
+  font: 40px "Montserrat";
+  text-align: left;
+  display: block;
+  margin-top: 2px;
+}
+
+header h2 {
+  color: white;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 0px;
+  text-align: justify;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-left: 80px;
+}
+
+#logo-img {
+  margin: 10px 10px 15px 35px;
+  padding-left: 40px;
+}
+
+.contenedor_episodios {
+  background: linear-gradient(191deg, rgb(8, 98, 233) 35%, rgb(0, 195, 255) 100%);
+  border-width: 190px;
+  color: white;
+  /*transform: rotate(-4deg) translate(-100px);*/
+  padding: 120px 7% 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contenedor_iframe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  object-fit: cover;
+}
+
+.contenedor_episodios::before {
+
+  border-color: #ffffff transparent;
+  border-style: solid;
+  border-width: 80px 1350px 0px 0px;
+  height: 0px;
+  width: 0px;
+  top: 0px;
+  left: 0px;
+}
+
+.contenedor_episodios:after {
+  border-color: transparent #ffffff;
+  border-style: solid;
+  border-width: 110px 650px 0px 0px;
+  height: 0px;
+  width: 0px;
+  bottom: 0px;
+  left: -80px;
+}
+
+.contenedor_episodios:before,
+.contenedor_episodios:after {
+  content: '';
+  position: absolute;
+}
+
+@media (min-width: 920px) {
+  .contenedor_episodios:before {
+    border-width: 80px 1920px 0px 0px;
+  }
+
+  .contenedor_episodios:after {
+    border-width: 100px 1920px 0px 0px;
+  }
+}
+
+#playlist {
+  max-width: 450px;
+  margin-left: 30px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 0px;
+}
+
+li,
+ul {
+  text-align: left;
+  list-style: none;
+  margin-left: 20px;
+}
+
+.conocemas {
+  background-color: aqua;
+  border: none;
+  color: white;
+  width: 288px;
+  height: 48px;
+  padding: 20px 34px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.conocemas:hover {
+  background-color: blue;
+}
+
+.marcoinvitados {
+  position: relative;
+
+}
+
+.marcoimagenes {
+  display: flex;
+  margin: 0px 30px 0px 0px;
+  flex-wrap: wrap;
+  padding: 3% 5% 2% 5%;
+  object-fit: cover;
+  justify-content: space-around;
+}
+
+.image {
+  margin: 3px;
+  width: 30%;
+}
+
+@media (max-width: 767px)
+
+/*Galeria*/
+  {
+
+  .marcoimagenes {
+    display: flex;
+    margin: 10px 30px 0px 0px;
+    flex-wrap: wrap;
+    padding: 3% 5% 2% 5%;
+    object-fit: cover;
+    justify-content: center;
+  }
+
+  .image {
+    margin: 3px;
+    width: 80%;
+  }
+
+  .episodios {
+    height: auto;
+    padding: 20%;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin-left: 30px;
+  }
+
+  .introduccion {
+    margin-left: 30px;
+    padding-right: 40px;
+  }
+
+  li,
+  ul {
+    margin-left: 5px;
+  }
+}
+
+#logo-img {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 10px 10px 15px 35px;
+  padding-left: 0px;
+}
+
+/* sección imagenes superpuestas */
+.imag_superpuestas {
+  margin: 2px 2px;
+  height: 550px;
+  position: relative;
+}
+
+.imagenfrente {
+  transform: translateY(-175px);
+  position: absolute;
+  margin: 25px 0px 0px 210px;
+  z-index: 3;
+}
+
+.imagenfondo {
+  padding: 5px;
+  position: absolute;
+  transform: translateY(-155px);
+  margin: 0 0 0 170px;
+}
+
+.contenedortexto {
+  transform: translateX(380px);
+  margin-right: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 54rem;
+  padding-left: 7.9rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 920px) {
+  .imag_superpuestas {
+    margin: 2px 2px;
+    height: 550px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .imagenfrente {
+    transform: translateY(-175px);
+    position: absolute;
+    margin: 10px 0px 0px 40px;
+    z-index: 3;
+  }
+
+  .imagenfondo {
+    padding: 5px;
+    position: absolute;
+    transform: translateY(-175px)translateX(-171px);
+    margin: 0 0 0 170px;
+  }
+
+  .contenedortexto {
+    transform: translateY(470px);
+    margin-right: 0px;
+    padding: 0 5px 0px 5px;
+    display: block;
+    width: 90%;
+  }
+
+  .marcoinvitados {
+    margin-top: 350px;
+  }
+}
+
+/* fin sección imagenes superpuestas */
+
+
+@media (max-width: 767px) {
+
+  .p1 {
+    font: 40px "Montserrat";
+    text-align: left;
+  }
+}
+
+.temas {
+  font: 30px "Montserrat";
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.listatemas {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.texto_lista {
+  text-align: center;
+}
+
+.fa,
+.fas {
+  font-weight: 900;
+  color: rgb(37, 37, 236);
+  font-size: 75px;
+  padding: 10px;
+}
+
+footer {
+  color: rgb(252, 252, 252);
+  background: rgb(33, 121, 253);
+  bottom: 0px;
+  padding: 17px 0 18px 0;
+  text-align: center;
+  width: 100%;
+  bottom: 0px;
+}
+
+footer a {
+  color: rgb(255, 255, 255);
+}
+
+footer a:hover {
+  color: #2356fc;
+}
+
+@media (min-width: 768px) {
+
+  .listatemas {
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
+}
+
+.contenedor_footer {
+  justify-content: center;
+}
+
+.contenedor_footer p {
+  text-align: center;
+}
