@@ -127,10 +127,8 @@ p {
   background: linear-gradient(191deg, rgb(8, 98, 233) 35%, rgb(0, 195, 255) 100%);
   border-width: 190px;
   color: white;
-  /*transform: rotate(-4deg) translate(-100px);*/
   padding: 120px 7% 250px;
-  position: relative;
-  overflow: hidden;
+  position: relative; 
 }
 
 .contenedor_iframe {
@@ -177,10 +175,14 @@ p {
   }
 }
 
-#playlist {
+#playlist1,
+#playlist2,
+#playlist3,
+#playlist4 {
   max-width: 450px;
   margin-left: 30px;
-  padding: 0px;
+  padding-right: 3.5rem;
+  padding-top: 3.5rem;
   display: flex;
   flex-wrap: wrap;
   border: 0px;
@@ -326,14 +328,14 @@ ul {
   .imagenfrente {
     transform: translateY(-175px);
     position: absolute;
-    margin: 10px 0px 0px 40px;
+    margin: 10px 0px 0px 25px;
     z-index: 3;
   }
 
   .imagenfondo {
     padding: 5px;
     position: absolute;
-    transform: translateY(-175px)translateX(-171px);
+    transform: translateY(-175px)translateX(-184px);
     margin: 0 0 0 170px;
   }
 
@@ -394,7 +396,7 @@ footer {
   padding: 17px 0 18px 0;
   text-align: center;
   width: 100%;
-  bottom: 0px;
+  bottom: 50px;
 }
 
 footer a {
@@ -413,15 +415,6 @@ footer a:hover {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-  }
-}
-
-@media (max-width: 767px) {
-
-  footer {
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
   }
 }
 
